@@ -1,6 +1,6 @@
 #!groovy
 
-@Library('jenkinslib') _     
+@Library('demo-share-lib') _
 
 def tools = new org.devops.tools()
 
