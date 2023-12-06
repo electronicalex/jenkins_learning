@@ -11,7 +11,7 @@ pipeline {
         //下载代码
         stage("GetCode"){
             steps{
-                timeout(time:1, unit:"MINUTES"){
+                timeout(time:2, unit:"MINUTES"){
                     script{
                         tools.PrintMes("获取代码",'yellow')
                     }
@@ -29,9 +29,9 @@ pipeline {
             }
         }
         //执行成功
-        stage("GetCode"){
+        stage("Success"){
             steps{
-                timeout(time:1, unit:"MINUTES"){
+                timeout(time:2, unit:"MINUTES"){
                     script{
                         tools.PrintMes("执行成功",'green')
                     }
@@ -39,9 +39,9 @@ pipeline {
             }
         }
         //执行失败
-        stage("GetCode"){
+        stage("Failure"){
             steps{
-                timeout(time:1, unit:"MINUTES"){
+                timeout(time:2, unit:"MINUTES"){
                     script{
                         tools.PrintMes("执行失败",'red')
                     }
