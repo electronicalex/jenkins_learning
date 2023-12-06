@@ -13,7 +13,7 @@ pipeline {
             steps{
                 timeout(time:2, unit:"MINUTES"){
                     script{
-                        tools.PrintMes("获取代码",'yellow')
+                        tools.printMsg("获取代码",'yellow')
                     }
                 }
             }
@@ -23,7 +23,7 @@ pipeline {
             steps{
                 timeout(time:5, unit:"MINUTES"){
                     script{
-                        tools.PrintMes("执行代码",'blue')
+                        tools.printMsg("执行代码",'blue')
                     }
                 }
             }
@@ -33,7 +33,7 @@ pipeline {
             steps{
                 timeout(time:2, unit:"MINUTES"){
                     script{
-                        tools.PrintMes("执行成功",'green')
+                        tools.printMsg("执行成功",'green')
                     }
                 }
             }
@@ -43,7 +43,7 @@ pipeline {
             steps{
                 timeout(time:2, unit:"MINUTES"){
                     script{
-                        tools.PrintMes("执行失败",'red')
+                        tools.printMsg("执行失败",'red')
                     }
                 }
             }
